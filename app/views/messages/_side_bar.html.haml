@@ -1,0 +1,12 @@
+.saide-bar
+  .saide-bar__user_name
+    .top-items
+      .top-items__name
+        masa
+      .top-items__icons
+      =link_to "#", class: "contents__btn top-items__btn--edit" do
+        =icon('fas fa-edit', class: "top-items__btn--icon")
+        -# %span<>
+      =link_to "#", class: "contents__btn contents__btn--cog" do
+        =icon('fas fa-cog', class: "contents__btn--icon")
+  .saide-bar__group_list

@@ -30,8 +30,8 @@ Things you may want to cover:
 |password|string|null: false,unique: true
 |username|string|null: false, add_index: true
 ### Association
-- has_many :goups,through:  :posts_tags
-- has_many :meggages
+- has_many :groups,through:  :posts_tags
+- has_many :messages
 - has_many :group_users
 
 ## groupsテーブル

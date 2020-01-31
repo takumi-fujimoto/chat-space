@@ -44,15 +44,18 @@
     background-color: #2f3e51;
     padding: 20px;
     .group {
+      margin: 0 0 40px;
+      a {
       font-weight: bold;
       text-decoration: none;
       color: #ffffff;
-      &__name {
-        font-size: 15px;
-        margin-bottom: 5px;
-      }
-      &__title {
-        font-size: 11px;
+        &__name {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &__title {
+          font-size: 11px;
+        }
       }
     }
   }

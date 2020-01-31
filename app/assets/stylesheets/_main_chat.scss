@@ -35,21 +35,24 @@
   }
   &__message {
     height: calc(100vh - 190px);
-    &__list {
-      margin-left: 40px;
-      padding-top: 35px;
-      .group_member {
-        color: #333333;
-        font-size: 16px;
+    margin-left: 40px;
+    padding-top: 35px;
+
+      .upper-message {
         display: flex;
-        margin-bottom: 12px;
-        &__send_time {
-          color: #999999;
-          font-size: 12px;
-          margin-left: 10px;
+        .group_member {
+          color: #333333;
+          font-size: 16px;
+          // display: flex;
+          margin-bottom: 12px;
+          &__send_time {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
         }
-      }
-    }
+    
+  }
         .member_message {
           color: #434a54;
           font-size: 14px;
@@ -61,19 +64,23 @@
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    .new-message {
+    
+      
+    .input-box {
       display: flex;
-      .input-box {
+      height: 50px;
+      .new_message {
+      width: 100%;
+      display: flex;
+      .input-box__text{
+        height: 50px;
         width: 100%;
-        display: flex;
-        position: relative;
-        &__text {
-          height: 50px;
-          width: 100%;
-          color: #434a54;
-          border-style: none;
-          padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none; 
+        padding: 0 40px 0 10px;
         }
+      .input-box__mask {
+        position: relative;
         &__image {
           cursor: pointer;
           font-size: 1.3rem;
@@ -83,19 +90,18 @@
           &__file {
             display: none;
           }
-
         }
       }
     }
-    .submit-btn {
-      width: 100px;
-      height: 50px;
-      padding: 0 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      color: white; 
-      cursor: pointer;
-      }
-    
   }
+  .submit-button {
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white; 
+    cursor: pointer;
+  }
+ }
 }

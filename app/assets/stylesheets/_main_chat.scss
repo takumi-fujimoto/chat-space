@@ -37,13 +37,12 @@
     height: calc(100vh - 190px);
     margin-left: 40px;
     padding-top: 35px;
-
+    overflow: scroll;
       .upper-message {
         display: flex;
         .group_member {
           color: #333333;
           font-size: 16px;
-          // display: flex;
           margin-bottom: 12px;
           &__send_time {
             color: #999999;

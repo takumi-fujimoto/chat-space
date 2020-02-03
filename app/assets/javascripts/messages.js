@@ -1,55 +1,24 @@
 $(function() {
-  var buildHTML = function(message) {
-    if (message.content && message.image) {
-      var html = `<div class="message" data-message-id=` + message.id + `>` +
-          `<div class="upper-message">` +
-            `<div class="group_member">` +
-              message.user_name +
-            `</div>` +
-            `<div class="group_member__send_time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="member_message">` +
-            `<p class="member_message__content">` +
-              message.content +
-            `</p>` +
-            `<img src="` + message.image + `"class=member_message__image">` +
-          `</div>` +
-        `</div>` 
-      } else if (message.content) {
-        var html = `<div class="message" data-message-id=` + message.id + `>` +
-          `<div class="upper-message">` +
-            `<div class="group_member">` +
-              message.user_name +
-            `</div>` +
-            `<div class="group_member__send_time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="member_message">` +
-            `<p class="member_message__content">` +
-              message.content +
-            `</p>` +
-          `</div>` +
-        `</div>`
-      } else if (message.image) {
-        var html = `<div class="message" data-message-id=` + message.id + `>` +
-          `<div class="upper-message">` +
-            `<div class="group_member">` +
-              message.user_name +
-            `</div>` +
-            `<div class="group_member__send_time">` +
-              message.created_at +
-            `</div>` +
-          `</div>` +
-          `<div class="member_message">` +
-            `<img src="` + message.image + `" class="member-message__image" >` +
-          `</div>` +
-        `</div>`
-      };
+  function buildHTML(message) {
+    image = (message.image) ? `<img class="member-message__image" src=${message.image}>`: "";
+      var html = `<div class="message" data-message-id="${message.id}">
+          <div class="upper-message">
+            <div class="group_member">
+              ${message.user_name}
+            </div>
+            <div class="group_member__send_time">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="member_message">
+            <p class="member_message__content">
+              ${message.content}
+            </p>
+              ${image}
+          </div>
+        </div>` 
       return html;
-    };
+    }
   
   
 
@@ -111,3 +80,4 @@ $(function() {
       setInterval(reloadMessages, 7000);
     }
 });
+

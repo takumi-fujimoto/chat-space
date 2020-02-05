@@ -37,9 +37,8 @@ $(function() {
       data: { keyword: input },
       dataType: "json"
     })
-      .done(function(users) {
+    .done(function(users) {
         $("#user-search-result").empty();
-
         if (users.length !== 0) {
           users.forEach(function(user) {
             addUser(user);
